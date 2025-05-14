@@ -69,7 +69,7 @@ if "current_topic_image_attempted" not in st.session_state: # Added for better i
 
 # --- UI Layout ---
 with st.sidebar:
-    st.image("/home/vignesh/Documents/Jupyter/Recent_DL_Models/Personalized Chatbot/test1.png", width=400)
+    st.image("test1.png", width=400)
     st.title("⚙Your Preferences")
     st.markdown("Customize your learning journey!")
 
