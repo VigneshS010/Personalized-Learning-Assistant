@@ -199,7 +199,7 @@ else:
 # Footer
 st.markdown("---")
 st.caption(
-    "🛠️ Developed by **Vignesh S** | Powered by Streamlit & OpenRouter AI\n\n"
+    "🛠️ Developed by **Vignesh S** \n\n"
     '<a href="https://www.linkedin.com/in/vignesh-s-9b86a7243" target="_blank">Connect on LinkedIn</a>',
     unsafe_allow_html=True
 )
