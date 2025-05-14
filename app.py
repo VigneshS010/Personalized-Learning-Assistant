@@ -101,8 +101,6 @@ with st.sidebar:
         st.session_state.current_topic_image_attempted = False
         if not topic:
             st.warning("Please enter a topic to learn.")
-        elif not OPENROUTER_API_KEY or OPENROUTER_API_KEY.startswith("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"):
-            st.error("OpenRouter API Key is missing or is the default placeholder. Please set it in the script.")
         else:
             with st.spinner('Finding an inspiring image for your topic...'):
                 image_url = fetch_topic_image(topic)
