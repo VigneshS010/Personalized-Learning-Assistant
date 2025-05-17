@@ -1,115 +1,107 @@
 
+# 📚 Personalized Learning Assistant
 
-# 🎓 Personalized Learning Assistant – Streamlit Web App
+An interactive AI-powered web app built with **Streamlit** that provides customized learning recommendations and topic explanations based on your preferred learning style and knowledge level.
 
-An AI-powered web application that enhances learning experiences by extracting subtitles from videos and generating downloadable `.srt` files. Built with Streamlit, OpenAI Whisper, and FFmpeg, this app makes video content more accessible and easier to follow.
+![App Screenshot](https://user-images.githubusercontent.com/placeholder/image.png)
 
 ---
 
 ## 🚀 Features
 
-- 🎥 Upload educational or lecture videos
-- 🔊 Convert video to audio using FFmpeg
-- 🧠 Transcribe audio to text using OpenAI's Whisper
-- 📝 Generate accurate, time-synced `.srt` subtitle files
-- 📽️ Display subtitles live while video is playing
-- 💾 Download subtitles as `.srt` files for external use
+* 🔍 **Personalized Content**: Get tailored explanations and curated resources for any topic.
+* 🎨 **Learning Styles**: Choose your preferred style — visual, auditory, kinesthetic, reading/writing, or mixed.
+* 📈 **Difficulty Levels**: Beginner, Intermediate, or Advanced.
+* 🖼️ **Inspiring Images**: Automatically fetches topic-relevant images from Pexels.
+* 📜 **Learning History**: View and revisit your past topic explorations.
+* 🧠 **Powered by LLMs**: Uses DeepSeek Chat via OpenRouter API.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** [Streamlit](https://streamlit.io/)
-- **Backend:**
-  - [Python](https://www.python.org/)
-  - [OpenAI Whisper](https://github.com/openai/whisper) for transcription
-  - [FFmpeg](https://ffmpeg.org/) + [Pydub](https://github.com/jiaaro/pydub) for audio processing
-- **Utilities:** OS, datetime, tempfile, base64
+* **Frontend**: Streamlit
+* **APIs**:
+
+  * OpenRouter AI (for language model responses)
+  * Pexels (for fetching topic-related images)
+* **Language**: Python
 
 ---
 
-## 📦 Installation
+## ⚙️ Setup Instructions
 
-### 🔧 Prerequisites
-
-- Python 3.8+
-- FFmpeg installed and added to system path
-
-### 📥 Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/personalized-learning-assistant.git
+git clone https://github.com/your-username/personalized-learning-assistant.git
 cd personalized-learning-assistant
-````
+```
 
-### 📦 Install dependencies
+### 2. Install dependencies
+
+Make sure you have Python 3.8+ installed.
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+### 3. Set up your API keys
 
-## ▶️ Usage
+Create a `.streamlit/secrets.toml` file and add your keys:
+
+```toml
+OPENROUTER_API_KEY = "your-openrouter-api-key"
+PEXELS_API_KEY = "your-pexels-api-key"
+```
+
+If `.streamlit` doesn't exist, create the directory manually.
+
+### 4. Run the app
 
 ```bash
 streamlit run app.py
 ```
 
-Then open the app in your browser at: [http://localhost:8501](http://localhost:8501)
-
 ---
 
-## 📁 Project Structure
+## 📂 File Structure
 
 ```
-personalized-learning-assistant/
-├── app.py                  # Main Streamlit app
-├── utils.py                # Utility functions (audio processing, SRT generation)
-├── requirements.txt        # Python dependencies
-├── test1.png               # Optional display image
-└── README.md               # You're here!
+├── app.py                   # Main Streamlit app
+├── requirements.txt         # Python dependencies
+├── .streamlit/
+│   └── secrets.toml         # API keys (user-provided)
+├── test1.png                # Sidebar image
+└── README.md                # Project documentation
 ```
 
 ---
 
-## 📌 How It Works
+## 🧪 Example Prompt
 
-1. **Upload Video** – User uploads a `.mp4` file
-2. **Audio Extraction** – Video is converted to `.wav` using FFmpeg
-3. **Transcription** – Whisper transcribes audio into text with timestamps
-4. **SRT File Generation** – Converts timestamps to `.srt` format
-5. **Live Subtitle Display** – Streamlit shows synchronized subtitles as video plays
-6. **Download** – User can download subtitles for reuse
+> Topic: **Linear Algebra**
+> Learning Style: **Visual**
+> Difficulty: **Beginner**
 
----
+The app generates:
 
-## 🧠 Future Enhancements
-
-* 🔤 Multi-language transcription
-* 🧑‍🏫 Speaker diarization (who spoke what)
-* 📄 Summarized transcript generation
-* ☁️ Deploy on Streamlit Cloud with public video link support
+* A simple explanation of linear algebra.
+* Curated videos, articles, or tools for visual learners.
+* Topic image fetched from Pexels.
 
 ---
 
-## 👨‍💻 Author
+## 🧑‍💻 Developer
 
-**Vignesh**
-📬 [LinkedIn](https://www.linkedin.com/in/yourprofile)
-💻 Passionate about AI, EdTech, and building impactful tools.
+Made with ❤️ by **[Vignesh S](https://www.linkedin.com/in/vignesh-s-9b86a7243/)**
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ---
 
-## ⭐️ Support
-
-If you find this project useful, please consider giving it a ⭐️ on GitHub and sharing it!
-
-
-Let me know if you want me to generate a `requirements.txt` file or add a license section. I can also generate a GitHub repository name suggestion.
+Would you also like me to generate a `requirements.txt` for this project?
